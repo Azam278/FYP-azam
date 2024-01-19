@@ -1,0 +1,55 @@
+body {
+  font-size: 16px;
+  background-color: #c6dfe6;
+}
+
+.container {
+  width: 40%;
+}
+
+h2,
+p {
+  text-align: center;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 18px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 25%;
+  border-radius: 50%;
+}
+
+.animate__zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
