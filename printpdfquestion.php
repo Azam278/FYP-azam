@@ -233,7 +233,7 @@
                                         $userId = $_SESSION['userid'];
 
                                         // Fetch data from the jpu table
-                                        $query = "SELECT c.CourseName, a.AssessmentType, qp.generalDesc,qp.QPStatus
+                                        $query = "SELECT c.CourseName, a.AssessmentType, qp.generalDesc
                                         FROM question_paper qp
                                         JOIN course c ON qp.CourseID = c.CourseID
                                         JOIN assessment a ON qp.AssessmentID = a.AssessmentID
