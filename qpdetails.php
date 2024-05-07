@@ -235,11 +235,11 @@
                                         $userId = $_SESSION['userid'];
 
                                         // Fetch data from the jpu table
-                                        $query = "SELECT c.CourseName, a.AssessmentType, qp.generalDesc,qp.QPStatus
+                                        $query = "SELECT c.CourseName, a.AssessmentType, qp.generalDesc
                                         FROM question_paper qp
                                         JOIN course c ON qp.CourseID = c.CourseID
                                         JOIN assessment a ON qp.AssessmentID = a.AssessmentID
-                                        WHERE qp.Staff_ID = '$userId' AND c.CourseID = '$courseID'";;
+                                        WHERE qp.Staff_ID = '$userId' AND c.CourseID = '$courseID'";
 
                                         $result = mysqli_query($conn, $query);
 
@@ -250,13 +250,11 @@
                                             $courseName = $row['CourseName'];
                                             $assessmentType = $row['AssessmentType'];
                                             $description = $row['generalDesc'];
-                                            $status = $row['QPStatus'];
 
                                             // Display the data
                                             echo '<p><b>Course Name:</b> ' . $courseName . '</p>';
                                             echo '<p><b>Question Type:</b> ' . $assessmentType . '</p>';
                                             echo '<p><b>General Description:</b> ' . $description . '</p>';
-                                            echo '<p><b>Status:</b> ' . $status . '</p>';
                                         } else {
                                             echo '<p>No data available.</p>';
                                         }
